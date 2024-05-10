@@ -29,22 +29,58 @@ enum FTMSDeviceState: Int {
 }
 
 class FTMSDeviceParam: NSObject {
-    var imperial: Bool?
-    var supportPause: Bool?
-    var supportHeart: Bool?
-    var supportStep: Bool?
-    var supportSpeed: Bool?
-    var maxSpeed: Float = 0.0
-    var minSpeed: Float = 0.0
-    var supportIncline: Bool?
-    var containIncline: Bool?
-    var maxIncline: Int = 0
-    var minIncline: Int = 0
-    var supportLevel: Bool?
-    var containLevel: Bool?
-    var maxLevel: Int = 0
-    var minLevel: Int = 0
+    var imperial: Bool
+    var supportPause: Bool
+    var supportHeart: Bool
+    var supportStep: Bool
+    var supportSpeed: Bool
+    var maxSpeed: Float
+    var minSpeed: Float
+    var supportIncline: Bool
+    var containIncline: Bool
+    var maxIncline: Int
+    var minIncline: Int
+    var supportLevel: Bool
+    var containLevel: Bool
+    var maxLevel: Int
+    var minLevel: Int
+    
+    init(imperial: Bool,
+         supportPause: Bool,
+         supportHeart: Bool,
+         supportStep: Bool,
+         supportSpeed: Bool,
+         maxSpeed: Float,
+         minSpeed: Float,
+         supportIncline: Bool,
+         containIncline: Bool,
+         maxIncline: Int,
+         minIncline: Int,
+         supportLevel: Bool,
+         containLevel: Bool,
+         maxLevel: Int,
+         minLevel: Int) {
+        
+        self.imperial = imperial
+        self.supportPause = supportPause
+        self.supportHeart = supportHeart
+        self.supportStep = supportStep
+        self.supportSpeed = supportSpeed
+        self.maxSpeed = maxSpeed
+        self.minSpeed = minSpeed
+        self.supportIncline = supportIncline
+        self.containIncline = containIncline
+        self.maxIncline = maxIncline
+        self.minIncline = minIncline
+        self.supportLevel = supportLevel
+        self.containLevel = containLevel
+        self.maxLevel = maxLevel
+        self.minLevel = minLevel
+        
+        super.init()
+    }
 }
+
 
 class FTMSDeviceValue: NSObject {
     var time: Int = 0
@@ -86,10 +122,11 @@ class FTMSBLEObject: NSObject {
     var rSSI: NSNumber?
     
     init(peripheral: CBPeripheral?, advertisementData: [AnyHashable: Any]?, rSSI: NSNumber?) {
-        super.init()
+        
         self.peripheral = peripheral
         self.advertisementData = advertisementData
         self.rSSI = rSSI
+        super.init()
     }
     
 }
