@@ -1,5 +1,5 @@
 
-# SwiftFTMS
+# SwiftFTMS [DON'T USE NOW, UNDER DEVELOPMENT RIGHT NOW]
 🏋️‍♀️ SwiftFTMS: iOS Fitness Machine Service Protocol Implementation
 ## Description
 SwiftFTMS is a robust Swift library designed for iOS developers to seamlessly integrate with fitness machines supporting the FTMS (Fitness Machine Service) protocol. Whether you're building a workout app, health tracker, or gym companion, SwiftFTMS empowers you to communicate with treadmills, rowers, bikes, and other fitness equipment effortlessly.
